@@ -1,0 +1,17 @@
+<script>
+  function getHtml(file){
+    return new Promise((resolve) => {
+      fetch(file)
+        .then((response) => {
+          return response.text();
+        })
+        .then((html) => {
+          resolve(html);
+        });
+    });
+  }
+  async function run(){
+    document.body.innerHTML=await getHtml("https://cdn.jsdelivr.net/gh/dragon731012/insecurly/data.html");
+  }
+  run();
+</script>
