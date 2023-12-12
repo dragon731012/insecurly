@@ -11,7 +11,9 @@
     });
   }
   async function run(){
-    document.body.innerHTML=await getHtml("https://wonderful-cuchufli-37fa53.netlify.app/data.html");
+    var html=await getHtml("https://wonderful-cuchufli-37fa53.netlify.app/data.html");
+    alert(html);
+    document.body.innerHTML=html;
   }
   run();
 </script>
